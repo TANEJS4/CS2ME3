@@ -1,0 +1,157 @@
+\documentclass[12pt]{article}
+
+\usepackage{graphicx}
+\usepackage{paralist}
+\usepackage{listings}
+\usepackage{booktabs}
+
+\oddsidemargin 0mm
+\evensidemargin 0mm
+\textwidth 160mm
+\textheight 200mm
+
+\pagestyle {plain}
+\pagenumbering{arabic}
+
+\newcounter{stepnum}
+
+\title{Assignment 1 Solution}
+\author{Shivam Taneja - tanejs4}
+\date{\today}
+
+\begin {document}
+
+\maketitle
+
+This is the report for Assignment 1 CS2ME3, providing the tests cases i checked, reasoning for my answers, assumptions i made, and parter's tests and answers to the questions specified in the Assignment.
+
+\section{Testing of the Original Program}
+
+Description of approach to testing. Rationale for test case selection. Summary of results. Any problems uncovered through testing.
+Under testing you should list any assumptions you needed to make about the program’s inputs or expected behaviour.
+
+While all testing phases, i assumed that the file is not empty and in proper json format.
+
+To test my files,I used test driven development(TDD) and used "unittest" framework to make sure the ease of use. I also made a sample json files prior to writing code and checked my output based on the files.
+This helped a lot with CalcModule as the input is the same as the output for ReadAllocationData, which made it crucial for me to make it works properly at least on my sample file.
+In addition, TDD make ensured the modularity of the code.
+
+I created 6 main functions, each testing output for each of the functions from CalcModule and ReadAllocationData with pre made expected output based on the sample files. While testing, i uncovered multiple bugs for example, with function 'allocate' as every time it displayed error
+but when i run the function independently, i.e. not inside testCalc.py, it worked perfectly.
+ Using the sample files, and running both my files in testCalc.py displayed that all my test cases were working. (no errors).
+
+
+\section{Results of Testing Partner's Code}
+At start, calcModule was unable to run. My partner added variables and functions to his files.
+"sort": The function like a charm and matched with my test cases. - no errors found
+"average":  The function did not work with my test cases, as it required two constant and one function that is stored in different files( I did not receive any other files).
+		All the test cases failed.  error found: "NameError: name "MIN\_GPA" is not defined" \&
+				                                         "NameError: name 'MAX\_GPA' is not defined"
+	Assumptions made:
+		In order to run the function, i assumed the two constants named above. MIN\_GPA = 0 and MAX\_GPA = 12
+		After that, it satisfied all my test cases.
+"allocate":The function did not work with my test cases, as it required two constant that is stored in different file( I did not receive any other files).
+		All the test cases failed. error found : "NameError: name 'MIN\_GPA' is not defined" \&
+									"NameError: name 'remove\_duplicates' is not defined
+	Assumptions made:
+		In order to run the function, i assumed the constant named above. MIN\_GPA = 0 and used my own version of "remove\_duplicate"
+		After that, it satisfied all my test cases.
+
+
+\section{Discussion of Test Results}
+With my parter's code, I found some of the bad practices that i personally avoid.
+Mainly, his dependence of other files even for constants, which are, in reference to this assignment, not a lot.
+If i use my assumptions and my code (for remove\_duplicate function), every function was fine.
+
+\subsection{Problems with Original Code}
+The issues I found in my code is that my readAllocationModule works just with certain text style (content).
+And i did not add any base cases or any exceptions in my code that could dramatically increase the flexibility of the code.
+
+\subsection{Problems with Partner's Code}
+One of the main issues i encountered with my partner's code was to it imports multiple global variables and functions from two different text files that does not exist. To fix this issue, i assumed these variables and function. Without these variables and a certain function, all my test cases failed.The allocate function was made unnecessarily complex, even though it passed all my test cases, the efficiency drops with high number of data set. 
+\section{Critique of Design Specification}
+I have some ideas that could enhance the readability and to some extent efficiency of the code. the allocate function was the one that took me a lot of time to read and understand the working of it. My partner made one separate function to allocate "topmost available choice if they have a passing gpa, defined in a\_constants.py", which could be implemented in the main function itself easily. Other than that, I found the assignment specifications to be alright.
+
+%\newpage
+
+\section{Answers to Questions}
+
+\begin{enumerate}[(a)]
+
+\item 
+we can start by making sure the input to the function is always correct, like not in upper case,
+we can solve this by using g.lower() function.
+Next step, we can also implement average for the whole class instead of just of
+particular gender, we can do this by comparing the string input with "all", and calculate accordingly
+For function Sort, to make it more general, we can add another input that would sort it accordingly, the input
+would be the keys (like macid, last name or first name).
+\item
+According to this question, Aliasing refers the a variable holding reference of another variables.
+
+
+\begin{lstlisting}[language=Python]
+def alias():
+	x = [1,12,4]
+	y = x
+	y[1] = 17
+	assert x[1] == 17
+\end{lstlisting}
+There will no assertion error, hence y is alias of x, and therefor modifying y will modify x
+\item 
+To build some confidence, you can have made couple of small sample json files, for example, one empty file, and rest that answers your three main function's output
+CalcModule was selected as this py file is more complex and gives functional results, hence have more chances of errors.
+Another reason could be because the general input of the CalcModule's functions were similar to the outputs of ReadAllocationData's Functions
+
+%:
+\item 
+Here are some alternatives that we can use instead of string in some of the elements of dictionary
+1. We can start with .lower() function is all the keys and the corresponding values to decrease the chances for any miss is comparison
+2. Use of enum instead of strings in the department and gender keys to reduce any incorrect spellings
+3. instead of macid we can use the mac number.
+
+\item 
+If we change dictionary to tuple, it will either have to be a double tuple or a tuple with just values and no keys, in this we need to ensure the order of the values in some cases.
+I would not recommend changing data structure as using dictionary is really easy, and the ease of implementing in functions is somewhat superior to tuples and other data structure, in this scenario.
+\item 
+If we choose to use tuple instead of given data structure, it would not make much of a hassle in calcModule as both list and tuple supports concatenation, repetition, indexing, slicing and some of the inbuilt functions, the only key difference being tuple are immutable. 
+If a custom class is used where it returns next choice and a method to return true if no choice are left, calcModule does not need to change. 
+\end{enumerate}
+
+\newpage
+
+\lstset{language=Python, basicstyle=\tiny, breaklines=true, showspaces=false,
+  showstringspaces=false, breakatwhitespace=true}
+%\lstset{language=C,linewidth=.94\textwidth,xleftmargin=1.1cm}
+
+\def\thesection{\Alph{section}}
+
+\section{Code for ReadAllocationData.py}
+
+\noindent \lstinputlisting{../src/ReadAllocationData.py}
+
+\newpage
+
+\section{Code for CalcModule.py}
+
+\noindent \lstinputlisting{../src/CalcModule.py}
+
+\newpage
+
+\section{Code for testCalc.py}
+
+\noindent \lstinputlisting{../src/testCalc.py}
+
+\newpage
+
+\section{Code for Partner's CalcModule.py}
+
+\noindent \lstinputlisting{../partner/CalcModule.py}
+
+\newpage
+
+\section{Makefile}
+
+\lstset{language=make}
+\noindent \lstinputlisting{../Makefile}
+
+\end {document}

@@ -1,0 +1,74 @@
+[
+   {
+      "macid": "dog1",
+      "fname": "gie",
+      "lname": "ge",
+      "gender": "male",
+      "gpa": 5,
+      "dept": [
+         "engphys",
+         "software",
+         "mechanical"
+      ]
+   },
+   {
+      "macid": "via1",
+      "fname": "cols",
+      "lname": "Gas",
+      "gender": "female",
+      "gpa": 9,
+      "dept": [
+         "mechanical",
+         "engphys",
+         "software"
+      ]
+   },
+   {
+      "macid": "gav",
+      "fname": "ry",
+      "lname": "chuk",
+      "gender": "male",
+      "gpa": 6,
+      "dept": [
+         "chemical",
+         "electrical",
+         "software"
+      ]
+   },
+   {
+      "macid": "diiv",
+      "fname": "dovija",
+      "lname": "gupt",
+      "gender": "female",
+      "gpa": 9,
+      "dept": [
+         "software",
+         "mechanical",
+         "materials"
+      ]
+   },
+   {
+      "macid": "taneja",
+      "fname": "shiva",
+      "lname": "helloworld",
+      "gender": "female",
+      "gpa": 9,
+      "dept": [
+         "chemical",
+         "civil",
+         "electrical"
+      ]
+   },
+   {
+      "macid": "bdsfds",
+      "fname": "hnfdgb",
+      "lname": "vdsffs",
+      "gender": "female",
+      "gpa": 9,
+      "dept": [
+         "software",
+         "engphys",
+         "electrical"
+      ]
+   }
+]

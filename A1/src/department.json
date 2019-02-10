@@ -1,0 +1,9 @@
+{
+   "civil": 20,
+   "chemical": 30,
+   "electrical": 40,
+   "mechanical": 100,
+   "software": 10,
+   "materials": 100,
+   "engphys": 40
+}

@@ -1,0 +1,179 @@
+\hypertarget{class_s_a_lst_1_1_s_a_lst}{}\section{S\+A\+Lst.\+S\+A\+Lst Class Reference}
+\label{class_s_a_lst_1_1_s_a_lst}\index{SALst.SALst@{SALst.SALst}}
+
+
+An abstract data type that stores student information.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_a_lst_1_1_s_a_lst_ac0886d79feebf875207b927b6d23a959}\label{class_s_a_lst_1_1_s_a_lst_ac0886d79feebf875207b927b6d23a959}} 
+def \mbox{\hyperlink{class_s_a_lst_1_1_s_a_lst_ac0886d79feebf875207b927b6d23a959}{init}} ()
+\begin{DoxyCompactList}\small\item\em init initial data structure \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_s_a_lst_1_1_s_a_lst_aa262f4e962a9957c18833f65dc07c72a}{add}} (m, i)
+\begin{DoxyCompactList}\small\item\em add adds the tuple of macid and student info in the set \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_s_a_lst_1_1_s_a_lst_a21390f23944739da71c78b8f684c7484}{remove}} (m)
+\begin{DoxyCompactList}\small\item\em remove deletes the tuple of macid and student info from the set \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_s_a_lst_1_1_s_a_lst_ac2dc6bf81574e9e0e4a92be790460765}{elm}} (m)
+\begin{DoxyCompactList}\small\item\em elm checks if the input string is in the data structure \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_s_a_lst_1_1_s_a_lst_ad28fcb7dd27999a47ab1d074e69dfaa9}{info}} (m)
+\begin{DoxyCompactList}\small\item\em info gives information about input from the data structure \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_s_a_lst_1_1_s_a_lst_af39c6101199578aefb42a15719754a61}{sort}} (f)
+\begin{DoxyCompactList}\small\item\em sort sorts the data structure \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_s_a_lst_1_1_s_a_lst_ae9c71d13a081d2eca72857c21840dd4b}{average}} (f)
+\begin{DoxyCompactList}\small\item\em average gives the requested average \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_s_a_lst_1_1_s_a_lst_a8cdba5b89e936165b3628f52d4e80938}{allocate}} ()
+\begin{DoxyCompactList}\small\item\em allocate allot students based on the provided conditions \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_a_lst_1_1_s_a_lst_a6bce06cad98e19185ec193f471ec0fdb}\label{class_s_a_lst_1_1_s_a_lst_a6bce06cad98e19185ec193f471ec0fdb}} 
+def {\bfseries get\+\_\+gpa} (m, s)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_a_lst_1_1_s_a_lst_afad925550fca16ca7c9f028df1a902ca}\label{class_s_a_lst_1_1_s_a_lst_afad925550fca16ca7c9f028df1a902ca}} 
+{\bfseries s} = set()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An abstract data type that stores student information. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_s_a_lst_1_1_s_a_lst_aa262f4e962a9957c18833f65dc07c72a}\label{class_s_a_lst_1_1_s_a_lst_aa262f4e962a9957c18833f65dc07c72a}} 
+\index{SALst.SALst@{SALst.SALst}!add@{add}}
+\index{add@{add}!SALst.SALst@{SALst.SALst}}
+\subsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily def S\+A\+Lst.\+S\+A\+Lst.\+add (\begin{DoxyParamCaption}\item[{}]{m,  }\item[{}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+add adds the tuple of macid and student info in the set 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Mac\+Id of the student (string) \\
+\hline
+{\em i} & information of the student(\+S\+Info\+T) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em throws} & Key\+Error if input i is not of the S\+InfoT type \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_s_a_lst_1_1_s_a_lst_a8cdba5b89e936165b3628f52d4e80938}\label{class_s_a_lst_1_1_s_a_lst_a8cdba5b89e936165b3628f52d4e80938}} 
+\index{SALst.SALst@{SALst.SALst}!allocate@{allocate}}
+\index{allocate@{allocate}!SALst.SALst@{SALst.SALst}}
+\subsubsection{\texorpdfstring{allocate()}{allocate()}}
+{\footnotesize\ttfamily def S\+A\+Lst.\+S\+A\+Lst.\+allocate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+allocate allot students based on the provided conditions 
+
+Sorts the data structure (condtion-\/$>$gpa more than or equal to the 4) starts alloting students with free choice as priority then students without freechoice. The limit of alloting is decided by the department capacity 
+\begin{DoxyExceptions}{Exceptions}
+{\em Throws} & Runtime\+Error \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_s_a_lst_1_1_s_a_lst_ae9c71d13a081d2eca72857c21840dd4b}\label{class_s_a_lst_1_1_s_a_lst_ae9c71d13a081d2eca72857c21840dd4b}} 
+\index{SALst.SALst@{SALst.SALst}!average@{average}}
+\index{average@{average}!SALst.SALst@{SALst.SALst}}
+\subsubsection{\texorpdfstring{average()}{average()}}
+{\footnotesize\ttfamily def S\+A\+Lst.\+S\+A\+Lst.\+average (\begin{DoxyParamCaption}\item[{}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+average gives the requested average 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & lambda function expresssion\\
+\hline
+\end{DoxyParams}
+Gets the average of G\+PA only of those sets who matches with the lambda expresssion \begin{DoxyReturn}{Returns}
+average of the gpa (Numeric) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_a_lst_1_1_s_a_lst_ac2dc6bf81574e9e0e4a92be790460765}\label{class_s_a_lst_1_1_s_a_lst_ac2dc6bf81574e9e0e4a92be790460765}} 
+\index{SALst.SALst@{SALst.SALst}!elm@{elm}}
+\index{elm@{elm}!SALst.SALst@{SALst.SALst}}
+\subsubsection{\texorpdfstring{elm()}{elm()}}
+{\footnotesize\ttfamily def S\+A\+Lst.\+S\+A\+Lst.\+elm (\begin{DoxyParamCaption}\item[{}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+elm checks if the input string is in the data structure 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Mac\+Id of the student (string) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if Mac\+Id is found else False 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_a_lst_1_1_s_a_lst_ad28fcb7dd27999a47ab1d074e69dfaa9}\label{class_s_a_lst_1_1_s_a_lst_ad28fcb7dd27999a47ab1d074e69dfaa9}} 
+\index{SALst.SALst@{SALst.SALst}!info@{info}}
+\index{info@{info}!SALst.SALst@{SALst.SALst}}
+\subsubsection{\texorpdfstring{info()}{info()}}
+{\footnotesize\ttfamily def S\+A\+Lst.\+S\+A\+Lst.\+info (\begin{DoxyParamCaption}\item[{}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+info gives information about input from the data structure 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Mac\+Id of the student (string) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+information of the student (S\+InfoT) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_a_lst_1_1_s_a_lst_a21390f23944739da71c78b8f684c7484}\label{class_s_a_lst_1_1_s_a_lst_a21390f23944739da71c78b8f684c7484}} 
+\index{SALst.SALst@{SALst.SALst}!remove@{remove}}
+\index{remove@{remove}!SALst.SALst@{SALst.SALst}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily def S\+A\+Lst.\+S\+A\+Lst.\+remove (\begin{DoxyParamCaption}\item[{}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+remove deletes the tuple of macid and student info from the set 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Mac\+Id of the student (string) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em throws} & Key\+Error if input m is not found in the set \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_s_a_lst_1_1_s_a_lst_af39c6101199578aefb42a15719754a61}\label{class_s_a_lst_1_1_s_a_lst_af39c6101199578aefb42a15719754a61}} 
+\index{SALst.SALst@{SALst.SALst}!sort@{sort}}
+\index{sort@{sort}!SALst.SALst@{SALst.SALst}}
+\subsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily def S\+A\+Lst.\+S\+A\+Lst.\+sort (\begin{DoxyParamCaption}\item[{}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+sort sorts the data structure 
+
+it uses inbuilt sorted function to sort Data structure based on their gpa and the lambda function 
+\begin{DoxyParams}{Parameters}
+{\em f} & lambda function expresssion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the data structure sorted according to the parameter 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_s_a_lst_8py}{S\+A\+Lst.\+py}}\end{DoxyCompactItemize}

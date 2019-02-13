@@ -1,0 +1,124 @@
+\hypertarget{class_d_cap_a_lst_1_1_d_cap_a_lst}{}\section{D\+Cap\+A\+Lst.\+D\+Cap\+A\+Lst Class Reference}
+\label{class_d_cap_a_lst_1_1_d_cap_a_lst}\index{DCapALst.DCapALst@{DCapALst.DCapALst}}
+
+
+An abstract data type that stores departments and it\textquotesingle{}s capacity.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_d_cap_a_lst_1_1_d_cap_a_lst_aaed5d536e93c43a53eca6c75faa64d2e}\label{class_d_cap_a_lst_1_1_d_cap_a_lst_aaed5d536e93c43a53eca6c75faa64d2e}} 
+def \mbox{\hyperlink{class_d_cap_a_lst_1_1_d_cap_a_lst_aaed5d536e93c43a53eca6c75faa64d2e}{init}} ()
+\begin{DoxyCompactList}\small\item\em init initial data structure \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_d_cap_a_lst_1_1_d_cap_a_lst_ad99d7bc7b919406b4a700f19b8cd7f14}{add}} (d, n)
+\begin{DoxyCompactList}\small\item\em add adds element to the set data structure \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_d_cap_a_lst_1_1_d_cap_a_lst_a8113456541a139e9c9a59dc371e84c3f}{remove}} (d)
+\begin{DoxyCompactList}\small\item\em remove deletes element from the set data structure \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_d_cap_a_lst_1_1_d_cap_a_lst_a67f399569fb01750b284689b66cf1b25}{elm}} (d)
+\begin{DoxyCompactList}\small\item\em elm checks if the department exists in the set \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_d_cap_a_lst_1_1_d_cap_a_lst_a4551b60c299ae51b0fd00257a40d61db}{capacity}} (d)
+\begin{DoxyCompactList}\small\item\em capacity checks the department size \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_d_cap_a_lst_1_1_d_cap_a_lst_a3beaf12440f69c7c35f12c8fde66e139}\label{class_d_cap_a_lst_1_1_d_cap_a_lst_a3beaf12440f69c7c35f12c8fde66e139}} 
+{\bfseries s} = set()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An abstract data type that stores departments and it\textquotesingle{}s capacity. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_d_cap_a_lst_1_1_d_cap_a_lst_ad99d7bc7b919406b4a700f19b8cd7f14}\label{class_d_cap_a_lst_1_1_d_cap_a_lst_ad99d7bc7b919406b4a700f19b8cd7f14}} 
+\index{DCapALst.DCapALst@{DCapALst.DCapALst}!add@{add}}
+\index{add@{add}!DCapALst.DCapALst@{DCapALst.DCapALst}}
+\subsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily def D\+Cap\+A\+Lst.\+D\+Cap\+A\+Lst.\+add (\begin{DoxyParamCaption}\item[{}]{d,  }\item[{}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+add adds element to the set data structure 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & department name of DeptT \\
+\hline
+{\em n} & capacity of the corresponding department \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em throws} & Key\+Error if datatypes of n doesn\textquotesingle{}t matches \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_d_cap_a_lst_1_1_d_cap_a_lst_a4551b60c299ae51b0fd00257a40d61db}\label{class_d_cap_a_lst_1_1_d_cap_a_lst_a4551b60c299ae51b0fd00257a40d61db}} 
+\index{DCapALst.DCapALst@{DCapALst.DCapALst}!capacity@{capacity}}
+\index{capacity@{capacity}!DCapALst.DCapALst@{DCapALst.DCapALst}}
+\subsubsection{\texorpdfstring{capacity()}{capacity()}}
+{\footnotesize\ttfamily def D\+Cap\+A\+Lst.\+D\+Cap\+A\+Lst.\+capacity (\begin{DoxyParamCaption}\item[{}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+capacity checks the department size 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & department name of DeptT \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of seats available in department 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em throws} & Key\+Error if department is not found \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_d_cap_a_lst_1_1_d_cap_a_lst_a67f399569fb01750b284689b66cf1b25}\label{class_d_cap_a_lst_1_1_d_cap_a_lst_a67f399569fb01750b284689b66cf1b25}} 
+\index{DCapALst.DCapALst@{DCapALst.DCapALst}!elm@{elm}}
+\index{elm@{elm}!DCapALst.DCapALst@{DCapALst.DCapALst}}
+\subsubsection{\texorpdfstring{elm()}{elm()}}
+{\footnotesize\ttfamily def D\+Cap\+A\+Lst.\+D\+Cap\+A\+Lst.\+elm (\begin{DoxyParamCaption}\item[{}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+elm checks if the department exists in the set 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & department name of DeptT \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if department exists else False 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_cap_a_lst_1_1_d_cap_a_lst_a8113456541a139e9c9a59dc371e84c3f}\label{class_d_cap_a_lst_1_1_d_cap_a_lst_a8113456541a139e9c9a59dc371e84c3f}} 
+\index{DCapALst.DCapALst@{DCapALst.DCapALst}!remove@{remove}}
+\index{remove@{remove}!DCapALst.DCapALst@{DCapALst.DCapALst}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily def D\+Cap\+A\+Lst.\+D\+Cap\+A\+Lst.\+remove (\begin{DoxyParamCaption}\item[{}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+remove deletes element from the set data structure 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & department name of DeptT \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em throws} & Key\+Error if department is not found \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_d_cap_a_lst_8py}{D\+Cap\+A\+Lst.\+py}}\end{DoxyCompactItemize}

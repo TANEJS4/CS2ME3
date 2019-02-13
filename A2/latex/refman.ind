@@ -1,0 +1,99 @@
+\begin{theindex}
+
+  \item {\_\_init\_\_}
+    \subitem {SeqADT.SeqADT}, \hyperpage{16}
+
+  \indexspace
+
+  \item {AALst.AALst}, \hyperpage{7}
+    \subitem {add\_stdnt}, \hyperpage{7}
+    \subitem {lst\_alloc}, \hyperpage{8}
+    \subitem {num\_alloc}, \hyperpage{8}
+  \item {add}
+    \subitem {DCapALst.DCapALst}, \hyperpage{9}
+    \subitem {SALst.SALst}, \hyperpage{13}
+  \item {add\_stdnt}
+    \subitem {AALst.AALst}, \hyperpage{7}
+  \item {allocate}
+    \subitem {SALst.SALst}, \hyperpage{13}
+  \item {average}
+    \subitem {SALst.SALst}, \hyperpage{13}
+
+  \indexspace
+
+  \item {capacity}
+    \subitem {DCapALst.DCapALst}, \hyperpage{9}
+
+  \indexspace
+
+  \item {DCapALst.DCapALst}, \hyperpage{8}
+    \subitem {add}, \hyperpage{9}
+    \subitem {capacity}, \hyperpage{9}
+    \subitem {elm}, \hyperpage{10}
+    \subitem {remove}, \hyperpage{10}
+
+  \indexspace
+
+  \item {elm}
+    \subitem {DCapALst.DCapALst}, \hyperpage{10}
+    \subitem {SALst.SALst}, \hyperpage{14}
+  \item {end}
+    \subitem {SeqADT.SeqADT}, \hyperpage{16}
+
+  \indexspace
+
+  \item {info}
+    \subitem {SALst.SALst}, \hyperpage{14}
+
+  \indexspace
+
+  \item {load\_dcap\_data}
+    \subitem {Read.py}, \hyperpage{20}
+  \item {load\_stdnt\_data}
+    \subitem {Read.py}, \hyperpage{21}
+  \item {lst\_alloc}
+    \subitem {AALst.AALst}, \hyperpage{8}
+
+  \indexspace
+
+  \item {next}
+    \subitem {SeqADT.SeqADT}, \hyperpage{16}
+  \item {num\_alloc}
+    \subitem {AALst.AALst}, \hyperpage{8}
+
+  \indexspace
+
+  \item {Read.py}
+    \subitem {load\_dcap\_data}, \hyperpage{20}
+    \subitem {load\_stdnt\_data}, \hyperpage{21}
+  \item {remove}
+    \subitem {DCapALst.DCapALst}, \hyperpage{10}
+    \subitem {SALst.SALst}, \hyperpage{14}
+
+  \indexspace
+
+  \item {SALst.SALst}, \hyperpage{12}
+    \subitem {add}, \hyperpage{13}
+    \subitem {allocate}, \hyperpage{13}
+    \subitem {average}, \hyperpage{13}
+    \subitem {elm}, \hyperpage{14}
+    \subitem {info}, \hyperpage{14}
+    \subitem {remove}, \hyperpage{14}
+    \subitem {sort}, \hyperpage{15}
+  \item {SeqADT.SeqADT}, \hyperpage{15}
+    \subitem {\_\_init\_\_}, \hyperpage{16}
+    \subitem {end}, \hyperpage{16}
+    \subitem {next}, \hyperpage{16}
+  \item {sort}
+    \subitem {SALst.SALst}, \hyperpage{15}
+  \item {src/AALst.py}, \hyperpage{19}
+  \item {src/DCapALst.py}, \hyperpage{19}
+  \item {src/Read.py}, \hyperpage{20}
+  \item {src/SALst.py}, \hyperpage{21}
+  \item {src/SeqADT.py}, \hyperpage{21}
+  \item {src/StdntAllocTypes.py}, \hyperpage{22}
+  \item {StdntAllocTypes.DeptT}, \hyperpage{11}
+  \item {StdntAllocTypes.GenT}, \hyperpage{11}
+  \item {StdntAllocTypes.SInfoT}, \hyperpage{17}
+
+\end{theindex}

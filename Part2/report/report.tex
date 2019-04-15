@@ -4,7 +4,6 @@
 \usepackage{paralist}
 \usepackage{listings}
 \usepackage{booktabs}
-
 \oddsidemargin 0mm
 \evensidemargin 0mm
 \textwidth 160mm
@@ -16,34 +15,64 @@
 \newcounter{stepnum}
 
 \title{Assignment 2 Solution}
-\author{?}
+\author{Shivam Taneja}
 \date{\today}
 
 \begin {document}
 
 \maketitle
 
-Introductory blurb.
-
+This is the report for Assignment 2 CS2ME3, providing the tests cases i checked, reasoning for my answers, assumptions i made, and parter’s tests and answers to the questions specified in the Assignment.
 \section{Testing of the Original Program}
+Description of approach to testing. Rationale for test case selection. Summary of results. Any problems uncovered through testing. Under testing you should list any assumptions you needed to make about the program’s inputs or expected behaviour.
 
-Description of approach to testing.  Rationale for test case selection.  Summary
-of results.  Any problems uncovered through testing.
+To test my code, I used pytest. The test cases included extreme cases i.e. providing empty or null inputs, normal cases (expected some value), and cases where i expect certain errors. During testing phase, i found couple of bugs predominantly with $DCapALst.py$  which was not giving the error $KeyError$ where expected. After fixing the code, other cases failed because of output it was providing $NoneType$.
+I creates 32  test cases in total, and my code passes all of them. 
 
 \section{Results of Testing Partner's Code}
-
 Consequences of running partner's code.  Success, or lack of success, running
 test cases.  Explanation of why it worked, or didn't.
+
+On testing my partner's file, I found that my code still have a bug with $DCapALst.py$ where it was not still giving $KeyError$ but instead some int value. Other than that, my partner's code seemed to pass all the requirements and my test cases.  
+
 
 \section{Critique of Given Design Specification}
 
 Advantages and disadvantages of the given design specification.
+My partner's code passed all the test cases, but after running $flake8$, there were 219 violations with 79 indentation errors. This is a bad practice, as in future we will work with codes of hundreds of line, making code, at times, unreadable and too messy.
 
 \section{Answers}
 
 \begin{enumerate}
 
-\item 
+\item In contrast to natural language in A1, i prefer having formal specification of A2 as understanding what each function does, what error it should raise, and what inputs are apt for it becomes really easy. Also the fact Natural language can be interpreted in different ways.
+\item By just having an $if$ condition, it would go something like this
+\begin{lstlisting}
+    def add(m, i):
+        if isinstance(i, SInfoT):
+        	if (i.gpa < 0 or i.gpa >12):  
+		 	raise ValueError	
+            	else:
+            		SALst.s.add(tuple((m, i)))
+        else:
+            raise KeyError
+\end{lstlisting}
+and No, we don't need to replace record type with new ADT.
+\item
+The documentation can be modified by making a base class, and sub classes and access the values
+The similarities between $DCapALst$ and $SALst$ can be inherited to the new class and pass rest of the functions as arguments.
+
+\item
+In A1, $FreeChoice$ is based on GPA only i.e. $4 \le x$
+In A2, you have more power to control this factor by a simple true or false value.
+The same can be said with other functions, names $sort$ and $allocate$, In A2, input as lambda function makes it really versatile to control the output.
+\item
+In contrast to List, $SeqADT$ is a generator i.e. it creates item in an instance instead of loading it in the memory. Also List could be complicated at times, for example having a list inside a dictionary inside a list. 
+
+\item
+Enums not only prevent any form of lingual incorrection such as capitalisation but also it directly maps to anything you want to use. It also help to easily check if the element exists or not. 
+
+Enums were not used in $macid$ as they as unique to each student.
 
 \end{enumerate}
 

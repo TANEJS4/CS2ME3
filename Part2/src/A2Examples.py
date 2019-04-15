@@ -27,11 +27,11 @@ SALst.add("stdnt4", sinfo4)
 SALst.add("stdnt5", sinfo5)
 
 
-# print(SALst.elm("stdnt1"))
-#
-# print(SALst.sort(lambda t: t.gender == GenT.male ))
-#
-# print(SALst.average(lambda x: x.gender == GenT.male))
+print(SALst.elm("stdnt1"))
+
+print(SALst.sort(lambda t: t.gender == GenT.male ))
+
+print(SALst.average(lambda x: x.gender == GenT.male))
 
 AALst.init()
 SALst.allocate()
